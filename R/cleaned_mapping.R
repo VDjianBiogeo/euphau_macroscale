@@ -1,0 +1,38 @@
+#'@description
+#'This function maps the spatial distribution of cleaned occurrence data from a 
+#'cleaned database.
+#'
+#'@return
+#'This function returns a map as a ggplot object.
+#'
+#'@export
+
+cleaned_mapping <- function(db_to_map){
+  
+  # Importing background geographic info
+  data(World, package = "tmap")
+  
+  # Mapping
+  all_map <- ggplot() +
+    geom_sf(data = World) +
+    geom_point(aes(x = lon,
+                   y = lat,
+                   color = source),
+               size = 1, 
+               data = db_to_map[, c("lon", "lat", "source")]) +
+    coord_sf(expand = F, crs = 4326, default_crs = sf::st_crs(4326)) +
+    guides(color = guide_legend(override.aes = list(size = 5))) +
+    theme_bw(base_size = 18) +
+    theme(axis.title = element_blank())
+  
+  ggsave(here::here("figures",
+                    "data_treatment",
+                    "cleaned_occurrence_map.png"),
+         all_map,
+         dpi = "retina",
+         width = 3660,
+         height = 2940,
+         units = "px")
+  
+  return(all_map)
+}

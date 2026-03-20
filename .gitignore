@@ -1,0 +1,66 @@
+# macOS files ----
+.DS_Store
+
+# History files ----
+.Rhistory
+.Rapp.history
+
+# Session Data files ----
+.RData
+.Ruserdata
+
+# RStudio files ----
+*.Rproj
+.Rproj.user/
+.Rbuildignore
+Rplots.pdf
+_targets.yaml
+
+# R Environment Variables ----
+.Renviron
+
+# User-specific files ----
+README.html
+inst/doc
+/biologic_production_model_map_traitzoo.png
+/data for env ranges prob.rds
+/euphau metrics with occurrence number.png
+/euphau_env_ranges_and_groups.csv
+/euphau_sp_list.csv
+/full_model_map_traitzoo.png
+/ocean_dynamics_model_map_traitzoo.png
+/pivot df for env ranges plot.rds
+/temp_and_chl_ridgelines_euphau.jpeg
+/water_mass_model_map_traitzoo.png
+/data
+/E.brevis/
+/E.frigida/
+/E.hemigibba/
+/E.longirostris/
+/E.lucens/
+/E.mutica/
+/E.recurva/
+/E.similis/
+/E.spinifera/
+/E.superba/
+/E.tenera/
+/E.triacantha/
+/E.vallentini/
+/H.atlantica/
+/H.megalops/
+/N.flexipes/
+/S.abbreviatum/
+/S.carinatum/
+/S.longicorne/
+/S.maximum/
+/T.aequalis/
+/T.gregaria/
+/T.macrura/
+/T.obtusifrons/
+/T.tricuspidata/
+/T.vicina/
+/outputs/
+/figures/
+/krill.jpg
+/sauvegarde/
+euphau_var_selected.csv

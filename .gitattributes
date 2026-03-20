@@ -1,0 +1,4 @@
+euphau_env_ranges_and_groups.csv filter=lfs diff=lfs merge=lfs -text
+euphau_sp_list.csv filter=lfs diff=lfs merge=lfs -text
+*.csv
+git[[:space:]]lfs[[:space:]]track[[:space:]]*.txt filter=lfs diff=lfs merge=lfs -text
