@@ -22,11 +22,6 @@ The repository of this project is structured as follow:
 | ├─ post_mod_analyses.R              # R script to treat and analyse modelling outputs
 |
 |
-├─ data/                              # Contains all data
-| ├─ raw                              # Raw data used for the project
-|     └─ bio                          # All biological data used for this project and extracted from different sources
-|     └─ env                          # All environmental data used for this project and extracted from Copernicus
-|
 |
 ├─ R/                                 # R function directory
 |
@@ -37,10 +32,10 @@ The repository of this project is structured as follow:
 ## Data
 
 *Biological data*\
-Euphausiid species observations were extracted at a worldwide scale from the Ocean Biodiversity Information System ([OBIS](https://obis.org)) and the Global Biodiversity Information Facility ([GBIF](https://www.gbif.org/fr/)) databases. To this pool of occurrences were added data from regional surveys, such as the REPCCOAI program (Djian et al., 2025; Merland et al., 2025). Data were extracted at a worldwide scale between 1950 to time of download (13/11/2023). You will find all data in the `/data/raw/bio` directory.
+Euphausiid species observations were extracted at a worldwide scale from the Ocean Biodiversity Information System ([OBIS](https://obis.org)) and the Global Biodiversity Information Facility ([GBIF](https://www.gbif.org/fr/)) databases. To this pool of occurrences were added data from regional surveys, such as the REPCCOAI program (Djian et al., 2025; Merland et al., 2025). Data were extracted at a worldwide scale between 1950 to time of download (13/11/2023). 
 
 *Environmental predictors*\
-“Physical” variables were extracted from the [Global Ocean Physics Reanalysis](https://doi.org/10.48670/moi-00021) available on [Copernicus](https://marine.copernicus.eu/?pk_vid=b2a6239971064277177185355142c261) in october of 2023. “Biogeochemical” variables were extracted from the [Global Ocean Biogeochemistry Hindcast](https://doi.org/10.48670/moi-00019) on [Copernicus](https://marine.copernicus.eu/?pk_vid=b2a6239971064277177185355142c261) in october of 2023. You will find all data in the `/data/raw/env` directory.
+“Physical” variables were extracted from the [Global Ocean Physics Reanalysis](https://doi.org/10.48670/moi-00021) available on [Copernicus](https://marine.copernicus.eu/?pk_vid=b2a6239971064277177185355142c261) in october of 2023. “Biogeochemical” variables were extracted from the [Global Ocean Biogeochemistry Hindcast](https://doi.org/10.48670/moi-00019) on [Copernicus](https://marine.copernicus.eu/?pk_vid=b2a6239971064277177185355142c261) in october of 2023. 
 
 ## Workflow
 
