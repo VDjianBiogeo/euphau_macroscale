@@ -312,6 +312,6 @@ make_pca_on_corr <- function(corr_table, sp_range_optimums){
          units = "px",
          dpi = "retina")
   
-  return(coord_sp)
+  return(list(pca_corr, coord_sp))
 
 }

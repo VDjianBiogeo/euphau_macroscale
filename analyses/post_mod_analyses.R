@@ -72,7 +72,7 @@ list(
   # Plotting environmental density ridges for all species
   tar_target(name = range_plots,
              command = plotting_env_ranges(binary_and_env,
-                                           corr_pca)),
+                                           corr_pca[[2]])),
   
   # Computing diversity indices
   tar_target(name = div_indices,
