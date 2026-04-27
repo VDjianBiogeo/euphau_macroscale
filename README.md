@@ -57,13 +57,13 @@ All the analysis pipelines can be launched from the `make.R` file. You need to l
 
 3) `pre_mod_analysis` pipeline down to the `mod_prep` function;
 
-4) Launch the scripts in the mpi scripts directory up to `6_ensemble_proj.R` (through cluster if needed);
+4) The scripts in the mpi scripts directory up to `6_ensemble_proj.R` (through cluster if needed);
 
-5) Launch the `pre_mod_analysis` pipeline once the outputs from step 4 are available;
+5) The `pre_mod_analysis` pipeline once the outputs from step 4 are available;
 
-6) Launch the rest of the scripts in the mpi directory;
+6) The rest of the scripts in the mpi directory;
 
-7) `post_mod_analysis.R`
+7) The `post_mod_analysis.R` pipeline.
 
 ## License
 
