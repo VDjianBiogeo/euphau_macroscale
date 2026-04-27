@@ -12,7 +12,10 @@ The repository of this project is structured as follow:
 .
 ├─ README.md                          # Description of the project
 
-|
+├─ data
+| ├─ raw
+|    ├─ bio
+|    ├─ env
 
 ├─ analyses                           # All R scripts used for analysis
 | ├─ mpi scripts                      # All R and shell scripts used in the SACADO Cluster for modelling
