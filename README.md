@@ -9,13 +9,12 @@ The repository of this project is structured as follow:
 
 ```         
 
-.
 ├─ README.md                          # Description of the project
 
 ├─ data
 | ├─ raw
-|    ├─ bio
-|    ├─ env
+|    ├─ bio                           # All biological data used for the project
+|    ├─ env                           # All environmental data used for the project
 
 ├─ analyses                           # All R scripts used for analysis
 | ├─ mpi scripts                      # All R and shell scripts used in the SACADO Cluster for modelling
@@ -24,7 +23,7 @@ The repository of this project is structured as follow:
 | ├─ pre_mod_analyses.R               # R script to select environmental predictors and optimise algorithm hyperparameters
 | ├─ post_mod_analyses.R              # R script to treat and analyse modelling outputs
 |
-|
+├─ outputs                            # All layers resulting from the complete analysis pipeline
 |
 ├─ R/                                 # R function directory
 |
