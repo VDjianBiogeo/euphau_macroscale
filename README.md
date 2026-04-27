@@ -32,10 +32,10 @@ The repository of this project is structured as follow:
 ## Data
 
 *Biological data*\
-Euphausiid species observations were extracted at a worldwide scale from the Ocean Biodiversity Information System ([OBIS](https://obis.org)) and the Global Biodiversity Information Facility ([GBIF](https://www.gbif.org/fr/)) databases. To this pool of occurrences were added data from regional surveys, such as the REPCCOAI program (Djian et al., 2025; Merland et al., 2025). Data were extracted at a worldwide scale between 1950 to time of download (13/11/2023). 
+Euphausiid species observations were extracted at a worldwide scale from the Ocean Biodiversity Information System ([OBIS](https://obis.org)) and the Global Biodiversity Information Facility ([GBIF](https://www.gbif.org/fr/)) databases. To this pool of occurrences were added data from regional surveys, such as the REPCCOAI program (Djian et al., 2025; Merland et al., 2025). Data were extracted at a worldwide scale between 1950 to time of download (13/11/2023). Raw data are available on [Zenodo](10.5281/zenodo.19815422) in the input/raw/bio directory.
 
 *Environmental predictors*\
-“Physical” variables were extracted from the [Global Ocean Physics Reanalysis](https://doi.org/10.48670/moi-00021) available on [Copernicus](https://marine.copernicus.eu/?pk_vid=b2a6239971064277177185355142c261) in october of 2023. “Biogeochemical” variables were extracted from the [Global Ocean Biogeochemistry Hindcast](https://doi.org/10.48670/moi-00019) on [Copernicus](https://marine.copernicus.eu/?pk_vid=b2a6239971064277177185355142c261) in october of 2023. 
+“Physical” variables were extracted from the [Global Ocean Physics Reanalysis](https://doi.org/10.48670/moi-00021) available on [Copernicus](https://marine.copernicus.eu/?pk_vid=b2a6239971064277177185355142c261) in october of 2023. “Biogeochemical” variables were extracted from the [Global Ocean Biogeochemistry Hindcast](https://doi.org/10.48670/moi-00019) on [Copernicus](https://marine.copernicus.eu/?pk_vid=b2a6239971064277177185355142c261) in october of 2023. Raw data are available on [Zenodo](10.5281/zenodo.19815422) in the input/raw/env directory.
 
 ## Workflow
 
@@ -46,6 +46,22 @@ After spatially joining every euphausiid species occurrence to environmental pre
 In addition to full ensemble models including all selected predictors, three partial models were constructed for each species using only predictors associated with one environmental category: *Water mass properties*, *Oceanic dynamics*, or *Biological production*. Partial models were calibrated using the same modelling procedure as full models, differing only in the predictor set. Spatial projections were compared using semi-partial Spearman's rank correlation coefficients computed across the study area. A Principal Component Analysis was applied on the resulting matrix of semi-partial correlation coefficients to position species according to the environmental structure most closely approximating the full model. A hierarchical ascendant classification was performed on species coordinates in the PCA factorial space to identify species sharing similar environmental dependency profiles.
 
 ![Schematic representation of the environmental partitioning framework. Complete and partial models were compared using semi-partial correlations to quantify the relative contribution of environmental variable groups, followed by multivariate analyses.](./Figure%20environmental%20partitioning.jpg)
+
+All the analysis pipelines can be launched from the `make.R` file. You need to launch:
+
+1) `source(here::here("analyses", "raw_euphau_data_treatment.R"))`;
+
+2) `exploratory_analyses.R` pipeline;
+
+3) `pre_mod_analysis` pipeline down to the `mod_prep` function;
+
+4) Launch the scripts in the mpi scripts directory up to `6_ensemble_proj.R` (through cluster if needed);
+
+5) Launch the `pre_mod_analysis` pipeline once the outputs from step 4 are available;
+
+6) Launch the rest of the scripts in the mpi directory;
+
+7) `post_mod_analysis.R`
 
 ## License
 
