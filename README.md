@@ -51,11 +51,11 @@ In addition to full ensemble models including all selected predictors, three par
 
 All the analysis pipelines can be launched from the `make.R` file. You need to launch:
 
-1) `source(here::here("analyses", "raw_euphau_data_treatment.R"))`;
+1) The `source(here::here("analyses", "raw_euphau_data_treatment.R"))`;
 
-2) `exploratory_analyses.R` pipeline;
+2) The `exploratory_analyses.R` pipeline;
 
-3) `pre_mod_analysis` pipeline down to the `mod_prep` function;
+3) The `pre_mod_analysis` pipeline down to the `mod_prep` function;
 
 4) The scripts in the mpi scripts directory up to `6_ensemble_proj.R` (through cluster if needed);
 
