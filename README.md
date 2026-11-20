@@ -49,7 +49,7 @@ In addition to full ensemble models including all selected predictors, three par
 
 ![Schematic representation of the environmental partitioning framework. Complete and partial models were compared using semi-partial correlations to quantify the relative contribution of environmental variable groups, followed by multivariate analyses.](./Figure%20environmental%20partitioning.jpg)
 
-All the analysis pipelines can be launched from the `make.R` file. You need to launch:
+The simulations were performed on the SACADO MeSU platform at Sorbonne Université through the functions found in the mpi directory, but can be done locally on your computer. All the analysis pipelines can be launched from the `make.R` file. You need to launch:
 
 1) The `source(here::here("analyses", "raw_euphau_data_treatment.R"))`;
 
